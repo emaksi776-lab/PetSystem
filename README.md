@@ -38,6 +38,6 @@
 ### Способ реализации проекта 
 Язык программирования Python  
 ### Er диаграма
-![img_4.png](img_4.png)
+![img.png](img.png)
 ### usecase
 ![img.png](src%2Fdiagram%2Fimg.png)

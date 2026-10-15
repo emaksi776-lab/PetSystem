@@ -1,0 +1,30 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor "администратор" as Admin
+actor "ветеринар" as Vet
+actor "рабочий по уходу" as Worker
+
+usecase "регистрация сотрудников" as UC1
+usecase "создание карточки животного" as UC2
+usecase "авторизация в системе" as UC3
+usecase "назначение лечения" as UC4
+usecase "запись симптомов" as UC5
+usecase "отметка о кормлении, приеме лекарств" as UC6
+usecase "закрепление хозяина за животным" as UC7
+
+Admin --> UC1
+Admin --> UC2
+Admin --> UC3
+Admin --> UC7
+
+Vet --> UC2
+Vet --> UC3
+Vet --> UC4
+Vet --> UC5
+
+Worker --> UC3
+Worker --> UC6
+
+@enduml

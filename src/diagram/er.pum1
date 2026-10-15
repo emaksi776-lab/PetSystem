@@ -1,0 +1,64 @@
+@startuml
+!theme plain
+hide circle
+skinparam linetype ortho
+
+entity "roles" as roles {
+  * role_id : INTEGER <<PK>>
+  --
+  name : TEXT
+}
+
+entity "employees" as employees {
+  * employee_id : INTEGER <<PK>>
+  --
+  full_name : TEXT
+  login : TEXT
+  password_hash : TEXT
+  role_id : INTEGER <<FK>>
+  hire_date : TEXT
+}
+
+entity "animals" as animals {
+  * animal_id : INTEGER <<PK>>
+  --
+  name : TEXT
+  species : TEXT
+  breed : TEXT
+  birth_date : TEXT
+  admission_date : TEXT
+  status : TEXT
+  emotional_state : TEXT
+  vet_id : INTEGER <<FK>>
+}
+
+entity "medical_records" as medical_records {
+  * record_id : INTEGER <<PK>>
+  --
+  animal_id : INTEGER <<FK>>
+  disease_name : TEXT
+  symptoms : TEXT
+  diagnosis_date : TEXT
+  treatment : TEXT
+  vet_id : INTEGER <<FK>>
+}
+
+entity "care_tasks" as care_tasks {
+  * task_id : INTEGER <<PK>>
+  --
+  animal_id : INTEGER <<FK>>
+  employee_id : INTEGER <<FK>>
+  task_type : TEXT
+  description : TEXT
+  scheduled_time : TEXT
+  is_done : INTEGER
+}
+
+roles ||--o{ employees : "1:N"
+employees ||--o{ animals : "1:N"
+employees ||--o{ medical_records : "1:N"
+employees ||--o{ care_tasks : "1:N"
+animals ||--o{ medical_records : "1:N"
+animals ||--o{ care_tasks : "1:N"
+
+@enduml

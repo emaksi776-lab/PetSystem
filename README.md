@@ -38,6 +38,6 @@
 ### Способ реализации проекта 
 Язык программирования Python  
 ### Er диаграма
-![er.png](..%2F..%2FDownloads%2Fer.png)  
+![img_4.png](img_4.png)
 ### usecase
-![Снимок экрана 2026-10-15 105926.png](..%2F..%2FOneDrive%2F%C8%E7%EE%E1%F0%E0%E6%E5%ED%E8%FF%2F%D1%ED%E8%EC%EA%E8%20%FD%EA%F0%E0%ED%E0%2F%D1%ED%E8%EC%EE%EA%20%FD%EA%F0%E0%ED%E0%202026-10-15%20105926.png)
+![img.png](src%2Fdiagram%2Fimg.png)
